@@ -42,6 +42,6 @@ int main() {
   }
 
 
-  // display(s);
+  display(s);
   save_extension(s, "lines.png");
 }
