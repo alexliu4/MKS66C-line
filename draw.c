@@ -23,56 +23,56 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
 
     //octant 1
     if (A >= 0 && A <= -B){
-      int d = 2*A + B;
+      int d = 2 * A + B;
       while (curx <= x1){
         plot(s, c, curx, cury);
         curx++;
-        d += 2*A;
+        d += 2 * A;
         if(d >= 0){
   	       cury++;
-  	       d += 2*B;
+  	       d += 2 * B;
         }
       }
     }
 
     //octant 2
     else if(A >= 0 && A >= -B){
-      int d = A + 2*B;
+      int d = A + 2 * B;
       while (cury <= y1){
         plot(s, c, curx, cury);
         cury++;
-        d += 2*B;
+        d += 2 * B;
         if(d <= 0){
   	       curx++;
-  	       d += 2*A;
+  	       d += 2 * A;
         }
       }
     }
 
     //octant 7
     else if (A <= 0 && A <=B){
-      int d = A - 2*B;
+      int d = A - 2 * B;
       while (cury >= y1){
         plot(s, c, curx, cury);
         cury--;
-        d -= 2*B;
+        d -= 2 * B;
         if (d >= 0){
   	       curx++;
-  	       d += 2*A;
+  	       d += 2 * A;
         }
       }
     }
 
     //octant 8
     else if (A <= 0 && A >= B){
-      int d = 2*A - B;
+      int d = 2 * A - B;
       while (curx <= x1){
         plot(s, c, curx, cury);
         curx++;
-        d += 2*A;
+        d += 2 * A;
         if (d <= 0){
   	       cury--;
-  	       d -= 2*B;
+  	       d -= 2 * B;
         }
       }
     }
